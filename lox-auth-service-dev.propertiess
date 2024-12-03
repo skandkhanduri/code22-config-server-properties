@@ -1,6 +1,6 @@
 spring.datasource.username= postgres
 spring.datasource.password=postgres
-spring.datasource.url= jdbc:postgresql://localhost:5432/lox
+spring.datasource.url= jdbc:postgresql://localhost:5432/postgres
 logging.level.org.springframework=DEBUG
 spring.jpa.hibernate.ddl-auto=none
 spring.jpa.database=POSTGRESQL
