@@ -1,0 +1,30 @@
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Logging
+logging.level.org.springframework=DEBUG
+logging.level.org.hibernate.SQL=DEBUG
+
+# JPA and Hibernate Configuration
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# SQL Initialization Platform
+spring.sql.init.platform=postgres
+
+# Connection Validation
+spring.datasource.test-while-idle=true
+spring.datasource.validation-query=SELECT 1
+
+# Optional HikariCP Configuration (Recommended for Production)
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.idle-timeout=30000
+
+
+management.endpoints.web.exposure.include= health, metrics, prometheus
+management.metrics.tags.application=${spring.application.name}
